@@ -1,0 +1,262 @@
+$Pale-Violet: #d89eff; //(sub-heading at the top of the app UI)
+$Moderate-Violet: #9241c8; //(chat on the left)
+$Desaturated-Dark-Violet: #6e5d7e; //(chat on the right)
+$Grayish-Blue: #c6cacd; //(placeholder text)
+$Very-Dark-Desaturated-Violet: #3e2753; //(main heading)
+$Dark-Grayish-Violet: #a39daa; //(paragraph)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.4;
+    font-family: 'Rubik', sans-serif;
+    overflow-x: auto;
+    background: #fafafa;
+}
+
+.container {
+    max-width: 1270px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+ul {
+    list-style: none;
+}
+
+.shape {
+    position: absolute;
+    top: 0;
+    left: -8rem;
+    width: 500px;
+    height: 600px;
+    background: linear-gradient(135deg, #e942ff, #8838ff);
+    border-radius: 0 0 50rem 50rem;
+    z-index: -10;
+}
+
+main {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+    //phone
+    .phone {
+        margin: 3rem;
+        justify-self: flex-end;
+        position: relative;
+        background-color: #f0f0f0;
+        width: 320px;
+        overflow: hidden;
+        border: 13px solid #fff;
+        border-radius: 30px;
+        height: 620px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.199);
+        .toch {
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 20px;
+            border-radius: 0 0 1rem 1rem;
+        }
+        //profile
+        .profile-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1rem 1rem 1rem;
+            background: linear-gradient(-90deg, #e942ff, #8838ff);
+            color: #fff;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.144);
+            .profile {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                margin-left: 1rem;
+                h2 {
+                    font-size: 15px;
+                    line-height: 1.2;
+                }
+                p {
+                    font-size: 10px;
+                    opacity: 50%;
+                }
+                img {
+                    border-radius: 50%;
+                    width: 30px;
+                    margin: 10px;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+        //chat section
+        .chat {
+            display: flex;
+            flex-direction: column;
+            padding: .5rem;
+            .left,
+            .right,
+            .left-price {
+                width: 50%;
+                margin: 4px;
+                background-color: #e0e0e0;
+                padding: .5rem 1rem .5rem .5rem;
+                border-radius: 1rem 1rem 1rem .3rem;
+                p {
+                    font-size: 8px;
+                    color: $Moderate-Violet
+                }
+                img {
+                    width: 50px;
+                    border-radius: 5px;
+                }
+            }
+            .right {
+                align-self: flex-end;
+                background-color: #fff;
+                border-radius: 1rem 1rem .3rem 1rem;
+                box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.055);
+                padding: .5rem;
+            }
+            li:nth-child(3) {
+                margin-top: 1rem;
+            }
+            li:nth-child(5) {
+                margin-bottom: 1rem;
+                width: fit-content;
+            }
+            .img-list {
+                background-color: unset;
+                padding: unset;
+                text-align: right;
+                width: fit-content;
+                box-shadow: none;
+            }
+            .left-price {
+                width: 180px;
+                background: linear-gradient(90deg, #e942ff, #8838ff);
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #fff;
+                    p {
+                        color: #fff;
+                        flex: 1;
+                        margin-left: 1rem;
+                    }
+                    label {
+                        position: relative;
+                        width: 15px;
+                        height: 15px;
+                        .check-style {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid rgba(255, 255, 255, 0.397);
+                            border-radius: 50%;
+                        }
+                        .price {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            cursor: pointer;
+                            opacity: 0;
+                            z-index: 10;
+                            &:checked {
+                                &+.check-style {
+                                    background-color: #ffffff;
+                                    border: 5px solid rgb(26, 112, 182);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //text box
+        form {
+            width: 100%;
+            padding: .5rem;
+            position: relative;
+            input {
+                width: 100%;
+                border-radius: 5rem;
+                padding: 1rem;
+                border: none;
+                outline: none;
+                &::placeholder {
+                    color: $Grayish-Blue;
+                }
+            }
+            button {
+                position: absolute;
+                cursor: pointer;
+                outline: none;
+                height: 2.5rem;
+                top: 50%;
+                right: .9rem;
+                transform: translateY(-50%);
+                border: none;
+                color: #fff;
+                width: 2.5rem;
+                border-radius: 50%;
+                background-color: hsl(271, 36%, 24%);
+                i {
+                    line-height: 2.5;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #text-header {
+        margin: 0 4rem;
+        padding: 0rem;
+        h1 {
+            color: $Very-Dark-Desaturated-Violet;
+            font-size: 3rem;
+            font-weight: 500;
+        }
+        p {
+            color: $Dark-Grayish-Violet;
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .shape {
+        left: -18rem;
+    }
+    main {
+        .container {
+            grid-template-columns: 1fr;
+            align-items: center;
+        }
+        .phone {
+            margin-top: 5rem;
+        }
+        #text-header {
+            margin: 2rem 0 0 0;
+            padding: 0 1rem;
+            text-align: center;
+            justify-self: center;
+            align-self: center;
+        }
+    }
+}

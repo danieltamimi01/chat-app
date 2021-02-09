@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Chat App</title>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/4cc4cd22ce.js" crossorigin="anonymous"></script>
+
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            width: 100%;
+            margin-top: 5rem;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="shape"></div>
+            <div class="phone">
+                <!-- toch -->
+                <div class="toch"></div>
+                <!-- profile -->
+                <div class="profile-section">
+                    <i class="fas fa-chevron-left"></i>
+                    <div class="profile">
+                        <img src="./images/avatar.jpg" alt="avatar">
+                        <div>
+                            <h2>Samuel Green</h2>
+                            <p>Available to Walk</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+
+                <!-- chat -->
+                <ul class="chat">
+                    <li class="left">
+                        <p>That sounds great. I’d be happy with that.</p>
+                    </li>
+                    <li class="left">
+                        <p>Could you send over some pictures of your dog, please?</p>
+                    </li>
+                    <li class="right img-list">
+                        <img src="./images/dog-image-1.jpg" alt="dog">
+                        <img src="./images/dog-image-2.jpg" alt="dog">
+                        <img src="./images/dog-image-3.jpg" alt="dog">
+                    </li>
+                    <li class="right">
+                        <p>Here are a few pictures. She’s a happy girl!</p>
+                    </li>
+                    <li class="right">
+                        <p>Can you make it?</p>
+                    </li>
+                    <li class="left">
+                        <p>She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+                    </li>
+                    <li class="left-price">
+                        <div>
+                            <label for="30m">
+                                <input type="checkbox" name="30m" id="30m" class="price">
+                                <div class="check-style"></div>
+                            </label>
+                            <p>30 minute walk</p>
+                            <strong>29$</strong>
+                        </div>
+                    </li>
+                    <li class="left-price">
+                        <div>
+                            <label for="1h">
+                                <input type="checkbox" name="1h" id="1h" class="price">
+                                <div class="check-style"></div>
+                            </label>
+                            <p>1 hour walk</p>
+                            <strong>49$</strong>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- textbox -->
+                <form action="">
+                    <input type="text" name="text" id="text" class="text" placeholder="Type a message…">
+                    <button type="submit"><i class="fas fa-chevron-right"></i></button>
+                </form>
+            </div>
+
+            <!-- text -->
+
+            <section id="text-header">
+                <h1>Simple booking</h1>
+                <p>Stay in touch with our dog walkers through the chat interface. This makes it easy to discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and book again all through the chat.</p>
+            </section>
+
+        </div>
+    </main>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Daniel Tamimi</a>.
+    </div>
+</body>
+
+</html>
